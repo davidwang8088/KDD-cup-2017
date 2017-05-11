@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 """
-Preprocessing table 6
+Scripts for data visualization
 """
