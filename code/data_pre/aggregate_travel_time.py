@@ -11,7 +11,7 @@ import math
 from datetime import datetime,timedelta
 
 file_suffix = '.csv'
-path = 'G:\KDDCUP2017\data_pre\dataSets\\training\\'  # set the data directory
+path = 'E:\Competetion\KDD-cup-2017\KDD_OFFICIAL_DATA\dataSets\\training\\'  # set the data directory
 
 def avgTravelTime(in_file):
 
@@ -30,7 +30,6 @@ def avgTravelTime(in_file):
     travel_times = {}  # key: route_id. Value is also a dictionary of which key is the start time for the time window and value is a list of travel times
     for i in range(len(traj_data)):
         each_traj = traj_data[i].replace('"', '').split(',')
-        print each_traj
         intersection_id = each_traj[0]
         tollgate_id = each_traj[1]
 

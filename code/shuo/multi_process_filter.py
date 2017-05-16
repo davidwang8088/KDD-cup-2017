@@ -1,12 +1,9 @@
 #coding:utf-8
 
 import sys
-
 import numpy
 import pandas
-
 from datetime import datetime
-
 from multiprocessing import Pool
 
 def sum_link_time(data, target,  process_num, this_process):
@@ -20,7 +17,7 @@ def sum_link_time(data, target,  process_num, this_process):
             target.loc[table_index, str2] += 1
 
 def gen_sum_l_table():
-    csv_data = pandas.read_csv('./links (table 3).csv')
+    csv_data = pandas.read_csv('E:\Competetion\KDD-cup-2017\KDD_OFFICIAL_DATA\dataSets\\training\links (table 3).csv')
     link_list = csv_data['link_id']
     table_columns = []
     for i in link_list.index:
@@ -31,7 +28,7 @@ def gen_sum_l_table():
     return table
 
 def gen_avg_l_table():
-    csv_data = pandas.read_csv('./links (table 3).csv')
+    csv_data = pandas.read_csv('E:\Competetion\KDD-cup-2017\KDD_OFFICIAL_DATA\dataSets\\training\links (table 3).csv')
     link_list = csv_data['link_id']
     table_columns = []
     for i in link_list.index:
@@ -52,17 +49,19 @@ def datetime2index(datetime_str):
     return 72 * day + time_w
 
 if __name__ == "__main__":
-    csv_data = pandas.read_csv('./trajectories(table 5)_training.csv')
+    csv_data = pandas.read_csv('E:\Competetion\KDD-cup-2017\KDD_OFFICIAL_DATA\dataSets\\training\\trajectories(table 5)_training.csv')
     travel_seq = csv_data['travel_seq'].str.split(';')
 
-    process_num = 3;
+    process_num = 1
     precess_pool = Pool(processes = process_num)
     sum_l_table = gen_sum_l_table()
-    for i in range(process_num):
-        precess_pool.apply_async(sum_link_time, (travel_seq, sum_l_table, process_num, i))
-        print("process start")
+    sum_link_time(travel_seq, sum_l_table, process_num, 0)
+    # for i in range(process_num):
+    #     result = precess_pool.apply_async(sum_link_time, (travel_seq, sum_l_table, process_num, i))
+    #     print("process start")
 
-    precess_pool.close()
-    precess_pool.join()
-
+    # precess_pool.close()
+    # precess_pool.join()
+    # if result.successful():
+    #     print 'successful'
     sum_l_table.to_csv('temp.csv', index = False)

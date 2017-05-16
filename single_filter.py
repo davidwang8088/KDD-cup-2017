@@ -8,7 +8,7 @@ import pandas
 from datetime import datetime
 
 def gen_table():
-    csv_data = pandas.read_csv('./links (table 3).csv')
+    csv_data = pandas.read_csv('E:\Competetion\KDD-cup-2017\KDD_OFFICIAL_DATA\dataSets\\training\links (table 3).csv')
     link_list = csv_data['link_id']
     table_columns = []
     for i in link_list.index:
@@ -32,7 +32,7 @@ def datetime2index(datetime_str):
 
 if __name__ == "__main__":
     full_table = gen_table()
-    csv_data = pandas.read_csv('./trajectories(table 5)_training.csv')
+    csv_data = pandas.read_csv('E:\Competetion\KDD-cup-2017\KDD_OFFICIAL_DATA\dataSets\\training\\trajectories(table 5)_training.csv')
     travel_seq = csv_data['travel_seq'].str.split(';')
     print(full_table.shape[0])
     for i in travel_seq.index:  #逐一读取 travel_seq
