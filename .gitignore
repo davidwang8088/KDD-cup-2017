@@ -1,3 +1,6 @@
+#ipython notebook
+.ipynb_checkpoints
+
 # Python
 *.py[cod]
 *.so
