@@ -23,7 +23,7 @@ def sum_link_time(data, file_name,  process_num, this_process):
     print(str(file_name) + " done!")
 
 def gen_sum_l_table():
-    csv_data = pandas.read_csv('./links (table 3).csv')
+    csv_data = pandas.read_csv('./training/links (table 3).csv')
     link_list = csv_data['link_id']
     table_columns = []
     for i in link_list:
@@ -34,7 +34,7 @@ def gen_sum_l_table():
     return table
 
 def gen_avg_l_table():
-    csv_data = pandas.read_csv('./links (table 3).csv')
+    csv_data = pandas.read_csv('./training/links (table 3).csv')
     link_list = csv_data['link_id']
     table_columns = []
     for i in link_list:
@@ -51,7 +51,7 @@ def datetime2index(datetime_str):
             return 72 * day + time_w
 
 if __name__ == "__main__":
-    csv_data = pandas.read_csv('./trajectories(table 5)_training.csv')
+    csv_data = pandas.read_csv('./training/trajectories(table 5)_training.csv')
     travel_seq = csv_data['travel_seq'].str.split(';')
 
     process_num = 4;
@@ -74,7 +74,7 @@ if __name__ == "__main__":
         sum_l_table += csv_data
 
     avg_l_table = gen_avg_l_table()
-    csv_data = pandas.read_csv('./links (table 3).csv')
+    csv_data = pandas.read_csv('./training/links (table 3).csv')
     link_list = csv_data['link_id']
     for i in link_list:
         str1 = str(i)
