@@ -50,11 +50,11 @@ def datetime2index(datetime_str):
         if the_minute < (time_w + 1) * 20:
             return 72 * day + time_w
 
-if __name__ == "__main__":
-    csv_data = pandas.read_csv('./training/trajectories(table 5)_training.csv')
+def main():
+    csv_data = pandas.read_csv('trajectories(table 5)_training.csv')
     travel_seq = csv_data['travel_seq'].str.split(';')
 
-    process_num = 4;
+    process_num = 4
     precess_pool = Pool(processes = process_num)
 
     for i in range(process_num):
@@ -74,7 +74,7 @@ if __name__ == "__main__":
         sum_l_table += csv_data
 
     avg_l_table = gen_avg_l_table()
-    csv_data = pandas.read_csv('./training/links (table 3).csv')
+    csv_data = pandas.read_csv('training/links (table 3).csv')
     link_list = csv_data['link_id']
     for i in link_list:
         str1 = str(i)
@@ -83,3 +83,6 @@ if __name__ == "__main__":
         avg_l_table[str1] = sum_l_table[str2] / sum_l_table[str3]
 
     avg_l_table.to_csv('result.csv', index = False)
+
+if __name__ == "__main__":
+    main()
