@@ -1,29 +1,29 @@
 #coding:utf-8
 
-from os import remove
-
-import numpy
+from os import remove, getcwd
 import pandas
 from datetime import datetime
-
 from multiprocessing import Pool
+
+dataset_path = str(getcwd()) + "\github\KDD_OFFICIAL_DATA\dataSets\\training\\"
 
 def sum_link_time(data, file_name,  process_num, this_process):
     target = gen_sum_l_table()
-    for i in range(this_process,len(travel_seq),process_num):  #逐一读取 travel_seq
-        for ii in range(len(travel_seq[i])):
-            temp = travel_seq[i][ii].split('#')
+
+    for i in range(this_process,len(data),process_num):  #逐一读取 travel_seq
+        for ii in range(len(data[i])):
+            temp = data[i][ii].split('#')
             str1 = str(temp[0]) + '_time'
             str2 = str(temp[0]) + '_count'
             table_index = datetime2index(temp[1])
-#            print(str(table_index) + " ", end = "")
             target.loc[table_index, str1] += float(temp[2])
             target.loc[table_index, str2] += 1
     target.to_csv(file_name, index = False)
     print(str(file_name) + " done!")
 
 def gen_sum_l_table():
-    csv_data = pandas.read_csv('./training/links (table 3).csv')
+    file = dataset_path + "links (table 3).csv"
+    csv_data = pandas.read_csv(file)
     link_list = csv_data['link_id']
     table_columns = []
     for i in link_list:
@@ -34,7 +34,8 @@ def gen_sum_l_table():
     return table
 
 def gen_avg_l_table():
-    csv_data = pandas.read_csv('./training/links (table 3).csv')
+    file = dataset_path + "links (table 3).csv"
+    csv_data = pandas.read_csv(file)
     link_list = csv_data['link_id']
     table_columns = []
     for i in link_list:
@@ -51,7 +52,8 @@ def datetime2index(datetime_str):
             return 72 * day + time_w
 
 def main():
-    csv_data = pandas.read_csv('trajectories(table 5)_training.csv')
+    file = dataset_path + "trajectories(table 5)_training.csv"
+    csv_data = pandas.read_csv(file)
     travel_seq = csv_data['travel_seq'].str.split(';')
 
     process_num = 4
@@ -74,7 +76,8 @@ def main():
         sum_l_table += csv_data
 
     avg_l_table = gen_avg_l_table()
-    csv_data = pandas.read_csv('training/links (table 3).csv')
+    file = dataset_path + "links (table 3).csv"
+    csv_data = pandas.read_csv(file)
     link_list = csv_data['link_id']
     for i in link_list:
         str1 = str(i)
@@ -82,7 +85,7 @@ def main():
         str3 = str(i) + '_count'
         avg_l_table[str1] = sum_l_table[str2] / sum_l_table[str3]
 
-    avg_l_table.to_csv('result.csv', index = False)
+    avg_l_table.to_csv('sum_link.csv', index = False)
 
 if __name__ == "__main__":
     main()
