@@ -1,11 +1,20 @@
 #coding:utf-8
 
 from os import remove, getcwd
+import platform
+
 import pandas
 from datetime import datetime
+
 from multiprocessing import Pool
 
-dataset_path = str(getcwd()) + "\github\KDD_OFFICIAL_DATA\dataSets\\training\\"
+my_platform = platform.system()
+if my_platform == "Windows":
+    dataset_path = str(getcwd()) + "\github\KDD_OFFICIAL_DATA\dataSets\\training\\"
+else:
+    dataset_path = "./training/"
+del my_platform
+
 
 def sum_link_time(data, file_name,  process_num, this_process):
     target = gen_sum_l_table()
