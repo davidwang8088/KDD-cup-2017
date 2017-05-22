@@ -10,7 +10,7 @@ from multiprocessing import Pool
 
 my_platform = platform.system()
 if my_platform == "Windows":
-    dataset_path = str(getcwd()) + "\github\KDD_OFFICIAL_DATA\dataSets\\training\\"
+    dataset_path = str(getcwd()) + "\\training\\"
 else:
     dataset_path = "./training/"
 del my_platform
