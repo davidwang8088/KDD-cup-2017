@@ -9,9 +9,11 @@ xgboost£ºwindows10 64Î»°²×°½Ì³Ì£¨https://www.zybuluo.com/Johnnywong/note/757972£
 ÆäÓàÄ£¿é°²×°¶ÔÓ¦ÏµÍ³°æ±¾£¬xgboost¹ÙÍø£ºhttp://xgboost.readthedocs.io/en/latest/build.html
 
 ## Useage
-1. Ê¹ÓÃcode\Data_preprocessing.ipynb,¶Ô±í¸ñ3£¬4£¬5£¬6½øĞĞÔ¤´¦Àí£¬ÔÚdata_preÎÄ¼ş¼ĞÉú³ÉÒÔtable3456¿ªÍ·µÄ4¸öcsvÎÄ¼ş£»
-2. Ê¹ÓÃcode\Data_preprocessing2.ipynb,¶Ô±í¸ñ3£¬4£¬5£¬6£¬7½øĞĞÔ¤´¦Àí£¬ÔÚdata_preÎÄ¼ş¼ĞÉú³ÉÒÔtable34567¿ªÍ·µÄ4¸öcsvÎÄ¼ş£»
-3. Ê¹ÓÃcode\Data_combine.ipynb£¬¶ÔÉÏÊöµÃµ½µÄÁ½¸ö°æ±¾µÄ8¸öcsvÎÄ¼ş½øĞĞºÏ²¢£¬Éú³É4¸öcsvÎÄ¼ş£»
-4. Ê¹ÓÃcode\Prediction.ipynb½øĞĞÔ¤²â£¬¶ÔµÚÈı²½µÃµ½µÄcsvÎÄ¼ş½øĞĞÔ¤²â£¬µÃµ½Ìá½»µÄÎÄ¼ş£»
 
-## ±¾´ÎÊ¹ÓÃµÄÌØÕ÷ÊÇ
+ipynb£º
+1. Ê¹ÓÃcode\total\Data_preprocessing.ipynb,¶Ô±í¸ñ3£¬4£¬5£¬6½øĞĞÔ¤´¦Àí£¬ÔÚdata_preÎÄ¼ş¼ĞÉú³ÉÒÔtable3456¿ªÍ·µÄ4¸öcsvÎÄ¼ş£»
+2. Ê¹ÓÃcode\total\Data_preprocessing2.ipynb,¶Ô±í¸ñ3£¬4£¬5£¬6£¬7½øĞĞÔ¤´¦Àí£¬ÔÚdata_preÎÄ¼ş¼ĞÉú³ÉÒÔtable34567¿ªÍ·µÄ4¸öcsvÎÄ¼ş£»
+3. Ê¹ÓÃcode\total\Prediction.ipynb½øĞĞÔ¤²â£¬¶ÔµÚÈı²½µÃµ½µÄcsvÎÄ¼ş½øĞĞÔ¤²â£¬µÃµ½Ìá½»µÄÎÄ¼ş£»
+
+py£º
+1. Ö±½ÓÔËĞĞ¿ÉÖ±½ÓµÃµ½½á¹û£¬·Ö±ğ²ÉÓÃÁËXgboostºÍLasso»Ø¹é£¬½á¹û´æ´¢ÔÚresultÎÄ¼ş¼ĞÀïÃæ
