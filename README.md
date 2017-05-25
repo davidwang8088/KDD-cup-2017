@@ -13,7 +13,8 @@ xgboost£ºwindows10 64Î»°²×°½Ì³Ì£¨https://www.zybuluo.com/Johnnywong/note/757972£
 ipynb£º
 1. Ê¹ÓÃcode\total\Data_preprocessing.ipynb,¶Ô±í¸ñ3£¬4£¬5£¬6½øĞĞÔ¤´¦Àí£¬ÔÚdata_preÎÄ¼ş¼ĞÉú³ÉÒÔtable3456¿ªÍ·µÄ4¸öcsvÎÄ¼ş£»
 2. Ê¹ÓÃcode\total\Data_preprocessing2.ipynb,¶Ô±í¸ñ3£¬4£¬5£¬6£¬7½øĞĞÔ¤´¦Àí£¬ÔÚdata_preÎÄ¼ş¼ĞÉú³ÉÒÔtable34567¿ªÍ·µÄ4¸öcsvÎÄ¼ş£»
-3. Ê¹ÓÃcode\total\Prediction.ipynb½øĞĞÔ¤²â£¬¶ÔµÚÈı²½µÃµ½µÄcsvÎÄ¼ş½øĞĞÔ¤²â£¬µÃµ½Ìá½»µÄÎÄ¼ş£»
+3. Ê¹ÓÃcode\total\EDA.ipynb£¬¶Ô±í¸ñ½øĞĞÊı¾İÌ½Ë÷£»
+4. Ê¹ÓÃcode\total\Prediction.ipynb½øĞĞÔ¤²â£¬¶ÔµÚÈı²½µÃµ½µÄcsvÎÄ¼ş½øĞĞÔ¤²â£¬µÃµ½Ìá½»µÄÎÄ¼ş£»
 
 py£º
 1. Ö±½ÓÔËĞĞ¿ÉÖ±½ÓµÃµ½½á¹û£¬·Ö±ğ²ÉÓÃÁËXgboostºÍLasso»Ø¹é£¬½á¹û´æ´¢ÔÚresultÎÄ¼ş¼ĞÀïÃæ

@@ -72,7 +72,8 @@ def main():
     test.head()
 
     # 保存结果
-    test.to_csv('..\..\\result\\xgboost_task1_ver3.csv', index=False)
+    test = test.sort_values(['intersection_id','tollgate_id'])
+    test.to_csv('..\..\\result\\xgboost_task1_sorted.csv', index=False)
 
 if __name__ == "__main__":
     main()

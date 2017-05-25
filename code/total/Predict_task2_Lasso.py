@@ -40,10 +40,11 @@ def main():
     test['volume'] = grid_search.predict(X_test)
     test = test.reset_index()
     test = test[['tollgate_id','time_window','direction','volume']]
+    test = test.sort_values(['time_window'])
     test.head()
 
     # 保存结果
-    test.to_csv('..\..\\result\\Lasso_task2.csv', index=False)
+    test.to_csv('..\..\\result\\Lasso_task2_sorted.csv', index=False)
 
 if __name__ == "__main__":
     main()
