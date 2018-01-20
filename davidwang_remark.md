@@ -1,3 +1,6 @@
+
+# 在这个repo提供的思路就是数据工程+决策树/线性回归方法
+
 ## 1.pandas数据设置新的索引  
 data.Frame.set_index('列的labael')  
 [pandas.DataFrame.set_index()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.set_index.html)
@@ -12,4 +15,4 @@ DataFrame.groupby()
 
 ## 4.提取特征之后,选择了相对简单的线性回归,决策树等方法进行预测   
 
-# 在这个repo提供的思路就是数据工程+决策树/线性回归方法
+
